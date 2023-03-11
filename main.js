@@ -78,10 +78,6 @@ function hideContactSection() {
 
 // Validation Form
 
-window.onload = function() {
-    document.getElementById("userName").focus();
-}
-
 function validateForm() {
     var userName = document.getElementById("userName").value;
     var userEmail = document.getElementById("userEmail").value;
@@ -133,6 +129,6 @@ function validateForm() {
     
     else {
         alert("Your information have been successfully submitted.");
-        document.getElementById("contactForm").reset();
+        // document.getElementById("contactForm").reset();
     }
 }
