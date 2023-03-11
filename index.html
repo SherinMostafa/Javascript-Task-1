@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Document</title>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <!-- OFF Canvas Menu -->
+        <main>
+            <section id="mySidenav" class="sideNav">
+                <a href="#" class="closeButton" onclick="closeNav()">&times;</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </section>
+            
+            <button class="button" onclick="openNav()">Open</button>
+            
+            <!-- Function that hide and show a section of code by clicking a button -->
+            <div>
+                <button id="averageButton" onclick="hideAverageSection()">Hide Average Section</button>
+                <button id="contactButton" onclick="hideContactSection()">Show Contact Section</button>    
+            </div>
+
+            <article id="body">
+                <!-- Average Function -->
+                <section class="average" id="average">
+                    <form>
+                        <h1>Average Calculator</h1>
+
+                        <input type="text" id="num1">
+                        <input type="text" id="num2">
+                        <input type="text" id="num3">
+                        <input type="text" id="num4">
+                        <input type="text" id="num5">
+                        <input type="text" id="num6">
+                        <input type="text" id="num7">
+                        <input type="text" id="num8">
+                        <input type="text" id="num9">
+                        <input type="text" id="num10">
+
+                        <input type="button" value="Calculate" onclick="return average()">
+                        <input type="reset" value="Reset">
+
+                        <input type="number" id="result" placeholder="Result" readonly>
+                    </form>
+                </section>
+                
+                <!-- Valdiation Form -->
+                <section class="main" id="main">
+                    <form id="contactForm" onsubmit="return validateForm()" novalidate>
+                        <h1>Contact Us</h1> 
+                        
+                        <p id="error">
+                            
+                        </p>
+                        
+                        <input type="text" placeholder="Username" id="userName">
+                        <input type="text" placeholder="Email Address" id="userEmail">
+                        <input type="text" placeholder="Phone Number" id="userPhone">
+        
+                        <input type="submit" value="Submit">
+                    </form>
+                </section>
+            </article>
+        </main>
+
+        <script src="main.js"></script>
+    </body>
+</html>

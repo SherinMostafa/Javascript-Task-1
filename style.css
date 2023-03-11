@@ -1,0 +1,279 @@
+/* Off Canvas Menu */
+article {
+    display: flex;
+    flex-wrap: wrap;
+
+    transition: 0.5s;
+}
+
+main .sideNav {
+    width: 0;
+    height: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1;
+    
+    background-color: #060047;
+    overflow-x: hidden;
+    padding-top: 60px;
+
+    transition: 0.5s;
+}
+
+main .sideNav a {
+    display: block;
+    padding: 20px 8px 8px 32px;
+
+    color: #818181;
+    font-size: 26px;
+    
+    text-decoration: none;
+    
+    transition: 0.3s;
+}
+  
+main .sideNav a:hover {
+    color: #e6ebe0;
+}
+  
+main .sideNav .closeButton {
+    position: absolute;
+    top: 0;
+    right: 25px;
+
+    font-size: 40px;
+    
+    margin-left: 50px;
+}
+
+main div {
+    position: fixed;
+    top: 8px;
+    right: 8px;
+}
+
+main .button {
+    height: 40px;
+}
+
+main button {
+    margin-left: 20px;
+    padding: 10px 10px;
+
+    color: #060047;
+    font-size: 14px;
+    font-weight: 600;
+
+    background-color: white;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    border: 1px solid #060047;
+    border-radius: 4px;
+
+    transition: all 0.6s ease-in-out;
+}
+
+main .button {
+    color: white;
+    background-color: #060047;
+}
+
+main button:hover {
+    cursor: pointer;
+
+    color: white;
+    background-color: #060047;
+
+    box-shadow: 8px 8px 16px #060047;
+}
+
+main .main, main .average {
+    transition: margin-left 0.5s;
+}
+  
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sideNav {padding-top: 15px;}
+    .sideNav a {font-size: 18px;}
+}  
+
+/* Average Function */
+main .average {
+    display: block;
+
+    width: 500px;
+    height: 64vh;
+
+    text-align: center;
+
+    margin: 30px auto;
+    padding: 50px;
+
+    border-radius: 5px;
+    background-color: #e6ebe0;
+
+    transition: all 0.5s ease-in-out;
+}
+
+main .average form input[type=text] {
+    width: 30px;
+    height: 20px;
+
+    margin: 20px;
+    padding: 10px;
+
+    border: 1px solid #060047;
+}
+
+main .average form input[type=text]:focus, input[type=number]:focus {
+    outline: none;
+}
+
+main .average form input[type=button], main .average form input[type=reset] {
+    padding: 10px;
+
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+
+    background-color: #060047;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    border: 1px solid #060047;
+    border-radius: 4px;
+
+    transition: all 0.6s ease-in-out;
+}
+
+main .average form input[type=button]:hover, main .average form input[type=reset]:hover {
+    cursor: pointer;
+
+    color: #060047;
+    background-color: white;
+
+    box-shadow: 8px 8px 16px #060047;
+}
+
+main .average form #result {
+    width: 120px;
+    height: 20px;
+
+    padding: 10px;
+    
+    margin-left: 40px;
+    margin-top: 80px;
+
+    border: 1px solid #e6ebe0;
+    
+    color: #060047;
+    font-weight: bold;
+    background-color: white;
+
+    transition: all 0.3s ease-in-out;
+}
+
+main .average form #result:focus {
+    outline: none;
+    border: 1px solid white;
+}
+
+main .average form #result::placeholder {
+    color: #060047;
+}
+
+/* Validation Form */
+main .main {
+    display: none;
+
+    text-align: center;
+
+    width: 500px;
+    height: 64vh;
+
+    margin: 30px auto;
+    padding: 50px;
+
+    border-radius: 5px;
+    background-color: #e6ebe0;
+
+    transition: all 0.5s ease-in-out;
+}
+
+main form h1 {
+    margin: 0px 0px 10px;
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid #060047;
+
+    color: #060047;
+    font-size: 30px;
+}
+
+main .main form p {
+    margin: 0px;
+
+    height: 20px;
+
+    color: #ED6A5A;
+}
+
+main .main form input[type=text] {
+    margin: 20px 0px 0px;
+    padding-left: 20px;
+
+    width: 480px;
+    height: 50px;
+
+    border: 1px solid #e6ebe0;
+    border-radius: 5px;
+}
+
+main .main form input[type=text]:focus {
+    outline: none;
+    border: 1px solid #060047;
+
+    box-shadow: 8px 8px 16px #06004748;
+}
+
+main .main form input[type=text]:focus::placeholder {
+    color: #e6ebe0;
+}
+
+main .main form input[type=submit] {
+    margin: 40px auto 0px;
+
+    width: 250px;
+    height: 50px;
+
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    background-color: #060047;
+
+    border: 1px solid #060047;
+    border-radius: 5px;
+
+    cursor: pointer;
+    transition: all 0.6s ease-in-out;
+}
+
+main .main form input[type=submit]:hover {
+    color: #060047;
+
+    border: 1px solid white;
+    background-color: white;
+    
+    box-shadow: 8px 8px 16px #060047;
+}
