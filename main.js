@@ -129,6 +129,5 @@ function validateForm() {
     
     else {
         alert("Your information have been successfully submitted.");
-        // document.getElementById("contactForm").reset();
     }
 }
