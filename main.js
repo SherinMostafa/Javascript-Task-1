@@ -106,7 +106,7 @@ function validateForm() {
         return false;
     }
 
-    else if (isNaN(userEmail) && userEmail.indexOf("@") == -1 && userEmail.length < 10) {
+    else if (userEmail.indexOf("@") == -1 || userEmail.length < 10) {
         // Error
         text = "Please Enter Valid Email Address";
         error.innerHTML = text;
@@ -120,7 +120,7 @@ function validateForm() {
         return false;
     }
 
-    else if (!(isNaN(userPhone)) && userPhone.length != 11) {
+    else if (isNaN(userPhone) || userPhone.length != 11) {
         // Error
         text = "Please Enter Valid Phone Number";
         error.innerHTML = text;
